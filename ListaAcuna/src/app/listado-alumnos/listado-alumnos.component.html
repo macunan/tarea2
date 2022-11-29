@@ -1,0 +1,20 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#ID</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Fecha de creación</th>
+        <th scope="col">Asistencia</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr [ngClass]="student.presente ? 'table-success' : 'mauri'" *ngFor="let student of students">
+        <th scope="row">{{ student.id }}</th>
+        <td>{{ student.firstName }}</td>
+        <td>{{ student.lastName }}</td>
+        <td>{{ student.createdAt | date }}</td>
+        <td>{{ student.presente }}</td>
+      </tr>
+    </tbody>
+  </table>
